@@ -27,9 +27,13 @@ def login():
         data = {'email' : email,
                 'password' : password}
         header = ""
-
+        
         #Post request to endpoint and have the response from endpoint 
-        r = requests.post(url, data=data)
+        try:
+            r = requests.post(url, data=data, timeout=30)
+            r.raise_for_status()
+        except requests.exceptions.HTTPError as err:
+            raise SystemExit(err)
 
         #Needed information gathered from the json response
         status = r.json()['status']
@@ -62,8 +66,21 @@ def getClient():
         url = "https://sandbox-reporting.rpdpymnt.com/api/v3/client"
         data = {'transactionId' : transactionId}
         header = {'Authorization' : session.get("token", None)}
-        r = requests.post(url, headers=header, data=data)
-        return r.json()
+
+        #We can also print smth but I choose to implement it as shown below
+        try:
+            r = requests.post(url, headers=header, data=data, timeout=30)
+            r.raise_for_status()
+        except requests.exceptions.HTTPError as errH:
+            raise SystemExit(errH)
+            #print ("Http Error:",errh)
+        except requests.exceptions.ConnectionError as errC:
+            raise ConnectionError(errC)
+            #print ("Error Connecting:",errc)
+        except requests.exceptions.Timeout as errt:
+            print ("Timeout Error:",errt)
+            
+        return '''Response by the endpoint is: ''' + r.json()
         
     return render_template('getClient.html')
 
@@ -83,7 +100,17 @@ def getTransaction():
         data = {'transactionId' : transactionId}
         header = {'Authorization' : session.get("token", None)}
 
-        r = requests.post(url, headers=header, data=data)
+        try:
+            r = requests.post(url, headers=header, data=data, timeout=30)
+            r.raise_for_status()
+        except requests.exceptions.HTTPError as errH:
+            raise SystemExit(errH)
+            #print ("Http Error:",errh)
+        except requests.exceptions.ConnectionError as errC:
+            raise ConnectionError(errC)
+            #print ("Error Connecting:",errc)
+        except requests.exceptions.Timeout as errt:
+            print ("Timeout Error:",errt)
         return r.json()
         
     return render_template('getTransaction.html')
@@ -113,7 +140,17 @@ def transactionQuery():
 
         if fromDate is None and toDate is None and merchantId is None and acquirerId is None and status is None and operation is None and paymentMethod is None and errorCode is None and filterField is None and filterValue is None and page is None:
             data = {}
-            r = requests.post(url, headers=header)
+        try:
+            r = requests.post(url, headers=header, timeout=30)
+            r.raise_for_status()
+        except requests.exceptions.HTTPError as errH:
+            raise SystemExit(errH)
+            #print ("Http Error:",errh)
+        except requests.exceptions.ConnectionError as errC:
+            raise ConnectionError(errC)
+            #print ("Error Connecting:",errc)
+        except requests.exceptions.Timeout as errt:
+            print ("Timeout Error:",errt)
             return r.json()
 
 
@@ -128,7 +165,18 @@ def transactionQuery():
                         'filterField' : filterField,
                         'filterValue' : filterValue,
                         'page' : page}
-                r = requests.post(url, headers=header, data=data)
+
+                try:
+                    r = requests.post(url, headers=header, data=data, timeout=30)
+                    r.raise_for_status()
+                except requests.exceptions.HTTPError as errH:
+                    raise SystemExit(errH)
+                    #print ("Http Error:",errh)
+                except requests.exceptions.ConnectionError as errC:
+                    raise ConnectionError(errC)
+                    #print ("Error Connecting:",errc)
+                except requests.exceptions.Timeout as errt:
+                    print ("Timeout Error:",errt)
                 return r.json()
 
             elif fromDate is not None and toDate is not None and merchantId is not None and acquirerId is not None:
@@ -137,7 +185,17 @@ def transactionQuery():
                         'merchantId' : merchantId,
                         'acquirerId' : acquirerId
                         }
-                r = requests.post(url, headers=header, data=data)
+                try:
+                    r = requests.post(url, headers=header, data=data, timeout=30)
+                    r.raise_for_status()
+                except requests.exceptions.HTTPError as errH:
+                    raise SystemExit(errH)
+                    #print ("Http Error:",errh)
+                except requests.exceptions.ConnectionError as errC:
+                    raise ConnectionError(errC)
+                    #print ("Error Connecting:",errc)
+                except requests.exceptions.Timeout as errt:
+                    print ("Timeout Error:",errt)
                 return r.json()
 
             elif fromDate is not None and toDate is not None:
@@ -145,6 +203,17 @@ def transactionQuery():
                         'toDate' : toDate
                         }
                 r = requests.post(url, headers=header, data=data)
+                try:
+                    r = requests.post(url, headers=header, data=data, timeout=30)
+                    r.raise_for_status()
+                except requests.exceptions.HTTPError as errH:
+                    raise SystemExit(errH)
+                    #print ("Http Error:",errh)
+                except requests.exceptions.ConnectionError as errC:
+                    raise ConnectionError(errC)
+                    #print ("Error Connecting:",errc)
+                except requests.exceptions.Timeout as errt:
+                    print ("Timeout Error:",errt)
                 return r.json()
 
             else:
@@ -156,6 +225,17 @@ def transactionQuery():
                         'operation' : operation,
                         'errorCode' : errorCode
                         }
+                try:
+                    r = requests.post(url, headers=header, data=data, timeout=30)
+                    r.raise_for_status()
+                except requests.exceptions.HTTPError as errH:
+                    raise SystemExit(errH)
+                    #print ("Http Error:",errh)
+                except requests.exceptions.ConnectionError as errC:
+                    raise ConnectionError(errC)
+                    #print ("Error Connecting:",errc)
+                except requests.exceptions.Timeout as errt:
+                    print ("Timeout Error:",errt)
                 return r.json()
             else:
                 return '''Provided request parameters are not in a form that endpoint can give response!'''

@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "6a3e0b9e-c910-4622-a2cd-6d8f3e2663ab",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16083552"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "https://sandbox-reporting.rpdpymnt.com/api/v3/merchant/user/login?email=demo@financialhouse.io&password=cjaiU8CV",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://sandbox-reporting.rpdpymnt.com/api/v3/merchant/user/login?email=demo@financialhouse.io&password=cjaiU8CV",
+					"protocol": "https",
+					"host": [
+						"sandbox-reporting",
+						"rpdpymnt",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"merchant",
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "demo@financialhouse.io"
+						},
+						{
+							"key": "password",
+							"value": "cjaiU8CV"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sandbox-reporting.rpdpymnt.com/api/v3/transactions/report?fromDate=2015-07-01&toDate=2015-10-01&merchant=1&acquirer=1",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXJjaGFudFVzZXJJZCI6NTMsInJvbGUiOiJ1c2VyIiwibWVyY2hhbnRJZCI6Mywic3ViTWVyY2hhbnRJZHMiOlszLDc0LDkzLDExOTEsMTI5NSwxMTEsMTM3LDEzOCwxNDIsMTQ1LDE0NiwxNTMsMzM0LDE3NSwxODQsMjIwLDIyMSwyMjIsMjIzLDI5NCwzMjIsMzIzLDMyNywzMjksMzMwLDM0OSwzOTAsMzkxLDQ1NSw0NTYsNDc5LDQ4OCw1NjMsMTE0OSw1NzAsMTEzOCwxMTU2LDExNTcsMTE1OCwxMTc5LDEyOTMsMTI5NCwxMzA2LDEzMDcsMTMyNCwxMzMxLDEzMzgsMTMzOSwxMzQxXSwidGltZXN0YW1wIjoxNjc1Mjc2MTEyfQ.Ix5v4GwP8_M2hzwQBdZjCZSv9rdDwMfPm9woZivgQU4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sandbox-reporting.rpdpymnt.com/api/v3/transactions/report?fromDate=2015-07-01&toDate=2015-10-01&merchant=1&acquirer=1",
+					"protocol": "https",
+					"host": [
+						"sandbox-reporting",
+						"rpdpymnt",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"transactions",
+						"report"
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "2015-07-01"
+						},
+						{
+							"key": "toDate",
+							"value": "2015-10-01"
+						},
+						{
+							"key": "merchant",
+							"value": "1"
+						},
+						{
+							"key": "acquirer",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sandbox-reporting.rpdpymnt.com/api/v3/client?transactionId=521-1487772550-1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXJjaGFudFVzZXJJZCI6NTMsInJvbGUiOiJ1c2VyIiwibWVyY2hhbnRJZCI6Mywic3ViTWVyY2hhbnRJZHMiOlszLDc0LDkzLDExOTEsMTI5NSwxMTEsMTM3LDEzOCwxNDIsMTQ1LDE0NiwxNTMsMzM0LDE3NSwxODQsMjIwLDIyMSwyMjIsMjIzLDI5NCwzMjIsMzIzLDMyNywzMjksMzMwLDM0OSwzOTAsMzkxLDQ1NSw0NTYsNDc5LDQ4OCw1NjMsMTE0OSw1NzAsMTEzOCwxMTU2LDExNTcsMTE1OCwxMTc5LDEyOTMsMTI5NCwxMzA2LDEzMDcsMTMyNCwxMzMxLDEzMzgsMTMzOSwxMzQxXSwidGltZXN0YW1wIjoxNjc1Mjk1MzY4fQ.SUnWqkb0NNvzdlbpDcQeD4C0kuxVe8IzFfhlHCWkpqw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sandbox-reporting.rpdpymnt.com/api/v3/client?transactionId=521-1487772550-1",
+					"protocol": "https",
+					"host": [
+						"sandbox-reporting",
+						"rpdpymnt",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"client"
+					],
+					"query": [
+						{
+							"key": "transactionId",
+							"value": "521-1487772550-1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sandbox-reporting.rpdpymnt.com/api/v3/transaction/list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXJjaGFudFVzZXJJZCI6NTMsInJvbGUiOiJ1c2VyIiwibWVyY2hhbnRJZCI6Mywic3ViTWVyY2hhbnRJZHMiOlszLDc0LDkzLDExOTEsMTI5NSwxMTEsMTM3LDEzOCwxNDIsMTQ1LDE0NiwxNTMsMzM0LDE3NSwxODQsMjIwLDIyMSwyMjIsMjIzLDI5NCwzMjIsMzIzLDMyNywzMjksMzMwLDM0OSwzOTAsMzkxLDQ1NSw0NTYsNDc5LDQ4OCw1NjMsMTE0OSw1NzAsMTEzOCwxMTU2LDExNTcsMTE1OCwxMTc5LDEyOTMsMTI5NCwxMzA2LDEzMDcsMTMyNCwxMzMxLDEzMzgsMTMzOSwxMzQxXSwidGltZXN0YW1wIjoxNjc1MzE5MDg2fQ.AChMlD0XcySyVVIExQBHyPapczxUVwR3gHjqDOSNWTY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sandbox-reporting.rpdpymnt.com/api/v3/transaction/list",
+					"protocol": "https",
+					"host": [
+						"sandbox-reporting",
+						"rpdpymnt",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"transaction",
+						"list"
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "2015-07-01",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "APPROVED",
+							"disabled": true
+						},
+						{
+							"key": "operation",
+							"value": "DIRECT",
+							"disabled": true
+						},
+						{
+							"key": "merchantId",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "acquirerId",
+							"value": "12",
+							"disabled": true
+						},
+						{
+							"key": "paymentMethod",
+							"value": "CREDITCARD",
+							"disabled": true
+						},
+						{
+							"key": "errorCode",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "filterField",
+							"value": "Reference No",
+							"disabled": true
+						},
+						{
+							"key": "filterValue",
+							"value": "1-1568845-56",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "toDate",
+							"value": "2015-10-01",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sandbox-reporting.rpdpymnt.com/api/v3/transaction?transactionId=1-1444392550-1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXJjaGFudFVzZXJJZCI6NTMsInJvbGUiOiJ1c2VyIiwibWVyY2hhbnRJZCI6Mywic3ViTWVyY2hhbnRJZHMiOlszLDc0LDkzLDExOTEsMTI5NSwxMTEsMTM3LDEzOCwxNDIsMTQ1LDE0NiwxNTMsMzM0LDE3NSwxODQsMjIwLDIyMSwyMjIsMjIzLDI5NCwzMjIsMzIzLDMyNywzMjksMzMwLDM0OSwzOTAsMzkxLDQ1NSw0NTYsNDc5LDQ4OCw1NjMsMTE0OSw1NzAsMTEzOCwxMTU2LDExNTcsMTE1OCwxMTc5LDEyOTMsMTI5NCwxMzA2LDEzMDcsMTMyNCwxMzMxLDEzMzgsMTMzOSwxMzQxXSwidGltZXN0YW1wIjoxNjc1Mjc3NjAzfQ.cpEPoX3YSRUbbet7UuSm5QmgCvcnPkQUNY5FsYRw2yM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sandbox-reporting.rpdpymnt.com/api/v3/transaction?transactionId=1-1444392550-1",
+					"protocol": "https",
+					"host": [
+						"sandbox-reporting",
+						"rpdpymnt",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"transaction"
+					],
+					"query": [
+						{
+							"key": "transactionId",
+							"value": "1-1444392550-1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://reporting.rpdpymnt.com/api/v3/merchant/user/login?email=merchant@test.com&password=12345",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://reporting.rpdpymnt.com/api/v3/merchant/user/login?email=merchant@test.com&password=12345",
+					"protocol": "https",
+					"host": [
+						"reporting",
+						"rpdpymnt",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"merchant",
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "merchant@test.com"
+						},
+						{
+							"key": "password",
+							"value": "12345"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
