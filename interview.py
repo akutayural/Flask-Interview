@@ -1,4 +1,4 @@
-from flask import Flask, make_response, session, render_template, request
+from flask import Flask, make_response, session, render_template, request, Blueprint
 import requests
 import json
 
@@ -80,7 +80,7 @@ def getClient():
         except requests.exceptions.Timeout as errt:
             print ("Timeout Error:",errt)
             
-        return '''Response by the endpoint is: ''' + r.json()
+        return r.json()
         
     return render_template('getClient.html')
 
@@ -135,7 +135,7 @@ def transactionQuery():
         for key, value in request.form.items():
             print(f'{key}: {value}')
         
-        url = "https://sandbox-reporting.rpdpymnt.com/api/v3/client"
+        url = "https://sandbox-reporting.rpdpymnt.com/api/v3/transaction/list"
         header = {'Authorization' : session.get("token")}
 
         if fromDate is None and toDate is None and merchantId is None and acquirerId is None and status is None and operation is None and paymentMethod is None and errorCode is None and filterField is None and filterValue is None and page is None:
