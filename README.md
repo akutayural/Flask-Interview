@@ -32,7 +32,7 @@ I think the endpoint uses MongoDB(port 27017) and the error comes from the Mongo
 - I have successfully commit my project from VSCode with a main branch as I'm the only worker of the project and version control have been made and everthing is
 up-to-date
 
-- I strongly suggest you to download the project in your local computer and run it on localhost:5000 . GitHub Pages doesn't work properly sometimes.
+- I strongly suggest you to download the project in your local computer and run it on localhost:5000 . The project hosted on GitHub Pages however It doesn't work properly sometimes.
 
 # How To Improve The Project More and More?
 - Session Control can be added.
