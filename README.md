@@ -21,7 +21,7 @@ I think the endpoint uses MongoDB(port 27017) and the error comes from the Mongo
 
 - I have successfully consume the 4 endpoints. 
 
-- Test Cases Succesfully passed.
+- Test Cases Succesfully passed. (In order to run the test, execute 'pytest' command in terminal)
 
 ![pytest](https://user-images.githubusercontent.com/69294802/216920096-a39527d2-949e-4805-a335-469cf6243a3a.png)
 
@@ -32,11 +32,13 @@ I think the endpoint uses MongoDB(port 27017) and the error comes from the Mongo
 - I have successfully commit my project from VSCode with a main branch as I'm the only worker of the project and version control have been made and everthing is
 up-to-date
 
+- I strongly suggest you to download the project in your local computer and run it on localhost:5000
 
 # How To Improve The Project More and More?
 - Session Control can be added.
 - More test conditions can be added.
 - Security issues must be taken into considerition more!
+
 
 
 # Please Consider 
