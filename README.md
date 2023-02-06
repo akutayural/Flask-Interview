@@ -12,11 +12,11 @@ endpoint. When I try to request with the parameters and a token, response as a J
 
 I think the endpoint uses MongoDB(port 27017) and the error comes from the MongoDB!
 
-- [x] Develop a web application, consume at least 4 endpoints from given document
-- [x] Prepare unit tests (pytest, etc.)
-- [x] Use git for version control
-- [x] Use bitbucket, github or gitlab for hosting your project
-- [x] Use Python3 and Flask framework. 
+- [:heavy_check_mark:] Develop a web application, consume at least 4 endpoints from given document
+- [:heavy_check_mark:] Prepare unit tests (pytest, etc.)
+- [:heavy_check_mark:] Use git for version control
+- [:heavy_check_mark:] Use bitbucket, github or gitlab for hosting your project
+- [:heavy_check_mark:] Use Python3 and Flask framework. 
 
 
 - I have successfully consume the 4 endpoints. 
