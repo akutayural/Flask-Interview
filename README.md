@@ -37,7 +37,7 @@ up-to-date
 # How To Improve The Project More and More?
 - Session Control can be added.
 - More test conditions can be added.
-- Security issues must be taken into considerition more!
+- Security issues must be taken into consideration more!
 
 
 
