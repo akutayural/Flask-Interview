@@ -1,6 +1,3 @@
-# Reporting API
-First of all, I really appreciate for giving me a chance to be interviewed by you.
-
 In the project, there are 5 endpoints that I can request. I couldn't use the 2nd endpoint which is Transaction Report because of the internal server problem of the 
 endpoint. When I try to request with the parameters and a token, response as a JSON is shown below.
 
