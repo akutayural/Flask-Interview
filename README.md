@@ -40,8 +40,3 @@ up-to-date
 - Security issues must be taken into consideration more!
 
 
-
-# Please Consider 
-- Although I know Pure Python, Data Science and Machine Learning libraries(such as: numpy,pandas,scikit-learn) and I used Django before to develop a web app,
-this is my first time developing a web app with flask. I have experience of these things given in the project with JAVA Spring. I'm a fast learner and I have passion for it. Although I work 32 hours in a restaurant and have 12 hours course
-university in a week, I tried to finish the interview questions. I love coding so much! 
